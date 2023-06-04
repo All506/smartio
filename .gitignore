@@ -86,3 +86,4 @@ buildSrc/build/
 .idea/tasks.xml
 /captures/
 
+*.lock

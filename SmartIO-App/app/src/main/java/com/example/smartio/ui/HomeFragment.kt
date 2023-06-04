@@ -36,13 +36,13 @@ class HomeFragment : Fragment() {
 
                 builder.setTitle("Confirmación")
                     .setMessage("¿Deseas cerrar la sesión actual?")
-                    .setPositiveButton("Sí") { dialog, id ->
+                    .setPositiveButton("Sí") { _, _ ->
                         // Acciones a realizar si el usuario confirma
                         val intent = Intent(activity, MainActivity::class.java)
                         startActivity(intent)
                         activity?.finish()
                     }
-                    .setNegativeButton("No") { dialog, id ->
+                    .setNegativeButton("No") { dialog, _ ->
                         // Acciones a realizar si el usuario cancela
                         dialog.cancel()
                     }
