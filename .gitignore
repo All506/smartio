@@ -22,3 +22,20 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 replay_pid*
+SmartIO-App/.gradle/7.0.2/executionHistory/executionHistory.bin
+SmartIO-App/.gradle/7.0.2/executionHistory/executionHistory.lock
+SmartIO-App/.gradle/7.0.2/fileHashes/fileHashes.bin
+SmartIO-App/.gradle/7.0.2/fileHashes/fileHashes.lock
+SmartIO-App/.gradle/7.0.2/fileHashes/resourceHashesCache.bin
+SmartIO-App/.gradle/7.0.2/javaCompile/classAnalysis.bin
+SmartIO-App/.gradle/7.0.2/javaCompile/jarAnalysis.bin
+SmartIO-App/.gradle/7.0.2/javaCompile/javaCompile.lock
+SmartIO-App/.gradle/7.0.2/javaCompile/taskHistory.bin
+SmartIO-App/.gradle/buildOutputCleanup/buildOutputCleanup.lock
+SmartIO-App/.gradle/buildOutputCleanup/outputFiles.bin
+SmartIO-App/.gradle/checksums/checksums.lock
+SmartIO-App/.gradle/checksums/md5-checksums.bin
+SmartIO-App/.gradle/checksums/sha1-checksums.bin
+SmartIO-App/.idea/modules/app/Smartio.app.main.iml
+SmartIO-App/.idea/vcs.xml
+SmartIO-App/local.properties
