@@ -87,3 +87,4 @@ buildSrc/build/
 /captures/
 
 *.lock
+SmartIO-App/.gradle/buildOutputCleanup/cache.properties
