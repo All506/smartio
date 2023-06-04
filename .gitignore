@@ -88,4 +88,3 @@ buildSrc/build/
 
 *.lock
 SmartIO-App/.gradle/buildOutputCleanup/cache.properties
-SmartIO-App/local.properties
