@@ -4,6 +4,9 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Smartio.iml" filepath="$PROJECT_DIR$/.idea/modules/Smartio.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Smartio.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Smartio.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Smartio.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Smartio.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Smartio.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Smartio.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Smartio.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Smartio.app.unitTest.iml" />
     </modules>
   </component>
 </project>
