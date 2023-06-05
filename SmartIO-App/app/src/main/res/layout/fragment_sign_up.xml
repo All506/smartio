@@ -46,11 +46,10 @@
 
     <Button
         android:id="@+id/button"
+        style="@style/MainButtonStyle"
         android:layout_width="@dimen/big_button"
         android:layout_height="wrap_content"
-        android:background="@color/main_button"
         android:text="SignUp"
-        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
