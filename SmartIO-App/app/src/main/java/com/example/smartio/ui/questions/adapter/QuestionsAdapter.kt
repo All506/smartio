@@ -4,7 +4,6 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.smartio.R
-import com.example.smartio.databinding.ItemQuestionBinding
 
 class QuestionsAdapter(private val items: List<String>) :
     RecyclerView.Adapter<QuestionsViewHolder>() {
@@ -17,7 +16,7 @@ class QuestionsAdapter(private val items: List<String>) :
     override fun onBindViewHolder(holder: QuestionsViewHolder, position: Int) {
         val item = items[position]
 
-        holder.createItem(item)
+        holder.createItem(item, position)
     }
 
     override fun getItemCount(): Int {

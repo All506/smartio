@@ -1,0 +1,5 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <size android:height="20dp" /> <!-- Cambia la altura según tus preferencias -->
+    <corners android:radius="20dp" /> <!-- Ajusta el radio de las esquinas según tus preferencias -->
+    <solid android:color="#CCFF00" /> <!-- Cambia el color según tus preferencias -->
+</shape>

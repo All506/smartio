@@ -4,4 +4,5 @@
     <dimen name="smallMargin">5dp</dimen>
     <dimen name="bigMargin">20dp</dimen>
     <dimen name="horizontal_margin">32dp</dimen>
+    <dimen name="marginBetweenNumbers">16dp</dimen>
 </resources>
