@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.activity.OnBackPressedCallback
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.example.smartio.MainActivity
 import com.example.smartio.R
 import com.example.smartio.databinding.FragmentHomeBinding
@@ -50,5 +51,13 @@ class HomeFragment : Fragment() {
 
             }
         })
+
+        binding.apply {
+
+            btnStartQuestions.setOnClickListener {
+                findNavController().navigate(R.id.action_homeFragment_to_questionsFragment)
+            }
+
+        }
     }
 }

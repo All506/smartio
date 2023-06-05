@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="big_button">250dp</dimen>
+    <dimen name="smallMargin">5dp</dimen>
+    <dimen name="bigMargin">20dp</dimen>
+    <dimen name="horizontal_margin">32dp</dimen>
 </resources>
