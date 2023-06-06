@@ -3,6 +3,7 @@ package smartio.api.crud.models;
 
 import javax.persistence.*;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -18,6 +19,8 @@ public class IntelligenceModel {
     @Column
     private String name;
 
+    @OneToMany(mappedBy="intelligence")
+    List<UserIntelligenceModel> intelligenceList;
 
     public Long getId() {
         return id;
@@ -43,5 +46,11 @@ public class IntelligenceModel {
         this.name = name;
     }
 
+    public List<UserIntelligenceModel> getIntelligenceList() {
+        return intelligenceList;
+    }
 
+    public void setIntelligenceList(List<UserIntelligenceModel> intelligenceList) {
+        this.intelligenceList = intelligenceList;
+    }
 }

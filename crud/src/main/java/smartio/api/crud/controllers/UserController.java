@@ -2,8 +2,11 @@ package smartio.api.crud.controllers;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import smartio.api.crud.models.UserModel;
+import smartio.api.crud.repositories.IUserRepository;
 import smartio.api.crud.services.UserService;
 
 import java.util.ArrayList;
@@ -54,7 +57,14 @@ public class UserController {
     }
 
     }
-
-
-
+    //------------------------------------
+    @PostMapping("/login")
+    public ResponseEntity<String> validateUser(@RequestBody UserModel user) {
+        if (userService.validateUser(user.getEmail(), user.getPassword())) {
+            return ResponseEntity.ok("Inicio de sesión exitoso");
+        } else {
+            return ResponseEntity.badRequest().body("Credenciales inválidas");
+        }
+    }
 }
+

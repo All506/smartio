@@ -10,4 +10,5 @@ import java.util.Optional;
 
 @Repository
 public interface IUserRepository extends JpaRepository<UserModel, Long> {
+    UserModel findByEmail(String email);
 }

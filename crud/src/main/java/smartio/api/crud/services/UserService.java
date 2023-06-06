@@ -60,7 +60,15 @@ public class UserService {
     }
     //------------------------------------
 
+    public boolean validateUser(String email, String password) {
+        UserModel user = userRepository.findByEmail(email);
 
+        if (user == null) {
+            return false; // Usuario no encontrado
+        }
+
+        return user.getPassword().equals(password);
+    }
 
 
 }
