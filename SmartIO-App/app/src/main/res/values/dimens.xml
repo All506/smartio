@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="big_button">250dp</dimen>
+    <dimen name="smallMargin">5dp</dimen>
+    <dimen name="bigMargin">20dp</dimen>
+    <dimen name="horizontal_margin">32dp</dimen>
+    <dimen name="marginBetweenNumbers">15.5dp</dimen>
+    <dimen name="checkbox_width">18dp</dimen>
+    <dimen name="checkbox_height">18dp</dimen>
+</resources>

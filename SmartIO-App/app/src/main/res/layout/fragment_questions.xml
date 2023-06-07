@@ -1,0 +1,785 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.questions.QuestionsFragment"
+    tools:visibility="visible">
+
+    <LinearLayout
+        android:id="@+id/containerChecks2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/smallMargin"
+        android:layout_marginEnd="@dimen/smallMargin"
+        android:clickable="false"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/smallMargin"
+        android:paddingTop="@dimen/smallMargin"
+        android:paddingEnd="@dimen/smallMargin"
+        android:paddingBottom="@dimen/smallMargin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/containerChecks"
+        app:layout_constraintVertical_bias="0.0">
+
+        <!--        <CheckBox-->
+        <!--            android:id="@+id/checkBox0"-->
+        <!--            android:layout_width="10.5dp"-->
+        <!--            android:layout_height="11dp"-->
+        <!--            android:checked="true"-->
+        <!--            android:clickable="false"-->
+        <!--            android:scaleX="0.7"-->
+        <!--            android:scaleY="0.7" />-->
+
+        <!--        <CheckBox-->
+        <!--            android:id="@+id/checkBox1"-->
+        <!--            android:layout_width="10.5dp"-->
+        <!--            android:layout_height="11dp"-->
+        <!--            android:layout_weight="1"-->
+        <!--            android:checked="true"-->
+        <!--            android:clickable="false"-->
+        <!--            android:scaleX="0.7"-->
+        <!--            android:scaleY="0.7" />-->
+
+        <!--        <CheckBox-->
+        <!--            android:id="@+id/checkBox2"-->
+        <!--            android:layout_width="10.5dp"-->
+        <!--            android:layout_height="11dp"-->
+        <!--            android:layout_weight="1"-->
+        <!--            android:checked="true"-->
+        <!--            android:clickable="false"-->
+        <!--            android:scaleX="0.7"-->
+        <!--            android:scaleY="0.7" />-->
+
+        <!--        <CheckBox-->
+        <!--            android:id="@+id/checkBox3"-->
+        <!--            android:layout_width="10.5dp"-->
+        <!--            android:layout_height="11dp"-->
+        <!--            android:checked="true"-->
+        <!--            android:clickable="false"-->
+        <!--            android:scaleX="0.7"-->
+        <!--            android:scaleY="0.7" />-->
+
+        <!--        <CheckBox-->
+        <!--            android:id="@+id/checkBox4"-->
+        <!--            android:layout_width="10.5dp"-->
+        <!--            android:layout_height="11dp"-->
+        <!--            android:checked="true"-->
+        <!--            android:clickable="false"-->
+        <!--            android:scaleX="0.7"-->
+        <!--            android:scaleY="0.7" />-->
+
+        <!--        <CheckBox-->
+        <!--            android:id="@+id/checkBox5"-->
+        <!--            android:layout_width="10.5dp"-->
+        <!--            android:layout_height="11dp"-->
+        <!--            android:layout_weight="1"-->
+        <!--            android:checked="true"-->
+        <!--            android:clickable="false"-->
+        <!--            android:scaleX="0.7"-->
+        <!--            android:scaleY="0.7" />-->
+
+        <!--        <CheckBox-->
+        <!--            android:id="@+id/checkBox6"-->
+        <!--            android:layout_width="10.5dp"-->
+        <!--            android:layout_height="11dp"-->
+        <!--            android:layout_weight="1"-->
+        <!--            android:checked="true"-->
+        <!--            android:clickable="false"-->
+        <!--            android:scaleX="0.7"-->
+        <!--            android:scaleY="0.7" />-->
+
+        <!--        <CheckBox-->
+        <!--            android:id="@+id/checkBox7"-->
+        <!--            android:layout_width="10.5dp"-->
+        <!--            android:layout_height="11dp"-->
+        <!--            android:layout_weight="1"-->
+        <!--            android:checked="true"-->
+        <!--            android:clickable="false"-->
+        <!--            android:scaleX="0.7"-->
+        <!--            android:scaleY="0.7" />-->
+
+        <!--        <CheckBox-->
+        <!--            android:id="@+id/checkBox8"-->
+        <!--            android:layout_width="10.5dp"-->
+        <!--            android:layout_height="11dp"-->
+        <!--            android:layout_weight="1"-->
+        <!--            android:checked="true"-->
+        <!--            android:clickable="false"-->
+        <!--            android:scaleX="0.7"-->
+        <!--            android:scaleY="0.7" />-->
+
+        <!--        <CheckBox-->
+        <!--            android:id="@+id/checkBox9"-->
+        <!--            android:layout_width="10.5dp"-->
+        <!--            android:layout_height="11dp"-->
+        <!--            android:layout_weight="1"-->
+        <!--            android:checked="true"-->
+        <!--            android:clickable="false"-->
+        <!--            android:scaleX="0.7"-->
+        <!--            android:scaleY="0.7" />-->
+
+        <!--        <CheckBox-->
+        <!--            android:id="@+id/checkBox10"-->
+        <!--            android:layout_width="10.5dp"-->
+        <!--            android:layout_height="11dp"-->
+        <!--            android:layout_weight="1"-->
+        <!--            android:checked="true"-->
+        <!--            android:clickable="false"-->
+        <!--            android:scaleX="0.7"-->
+        <!--            android:scaleY="0.7" />-->
+
+        <!--        <CheckBox-->
+        <!--            android:id="@+id/checkBox11"-->
+        <!--            android:layout_width="10.5dp"-->
+        <!--            android:layout_height="11dp"-->
+        <!--            android:layout_weight="1"-->
+        <!--            android:checked="true"-->
+        <!--            android:clickable="false"-->
+        <!--            android:scaleX="0.7"-->
+        <!--            android:scaleY="0.7" />-->
+
+        <!--        <CheckBox-->
+        <!--            android:id="@+id/checkBox12"-->
+        <!--            android:layout_width="10.5dp"-->
+        <!--            android:layout_height="11dp"-->
+        <!--            android:layout_weight="1"-->
+        <!--            android:checked="true"-->
+        <!--            android:clickable="false"-->
+        <!--            android:scaleX="0.7"-->
+        <!--            android:scaleY="0.7" />-->
+
+        <!--        <CheckBox-->
+        <!--            android:id="@+id/checkBox13"-->
+        <!--            android:layout_width="10.5dp"-->
+        <!--            android:layout_height="11dp"-->
+        <!--            android:layout_weight="1"-->
+        <!--            android:checked="true"-->
+        <!--            android:clickable="false"-->
+        <!--            android:scaleX="0.7"-->
+        <!--            android:scaleY="0.7" />-->
+
+        <!--        <CheckBox-->
+        <!--            android:id="@+id/checkBox14"-->
+        <!--            android:layout_width="10.5dp"-->
+        <!--            android:layout_height="11dp"-->
+        <!--            android:layout_weight="1"-->
+        <!--            android:checked="true"-->
+        <!--            android:clickable="false"-->
+        <!--            android:scaleX="0.7"-->
+        <!--            android:scaleY="0.7" />-->
+
+        <!--        <CheckBox-->
+        <!--            android:id="@+id/checkBox15"-->
+        <!--            android:layout_width="10.5dp"-->
+        <!--            android:layout_height="11dp"-->
+        <!--            android:layout_weight="1"-->
+        <!--            android:checked="true"-->
+        <!--            android:clickable="false"-->
+        <!--            android:scaleX="0.7"-->
+        <!--            android:scaleY="0.7" />-->
+
+        <!--        <CheckBox-->
+        <!--            android:id="@+id/checkBox16"-->
+        <!--            android:layout_width="10.5dp"-->
+        <!--            android:layout_height="11dp"-->
+        <!--            android:layout_weight="1"-->
+        <!--            android:checked="true"-->
+        <!--            android:clickable="false"-->
+        <!--            android:scaleX="0.7"-->
+        <!--            android:scaleY="0.7" />-->
+
+        <!--        <CheckBox-->
+        <!--            android:id="@+id/checkBox17"-->
+        <!--            android:layout_width="10.5dp"-->
+        <!--            android:layout_height="11dp"-->
+        <!--            android:layout_weight="1"-->
+        <!--            android:checked="true"-->
+        <!--            android:clickable="false"-->
+        <!--            android:scaleX="0.7"-->
+        <!--            android:scaleY="0.7" />-->
+
+        <!--        <CheckBox-->
+        <!--            android:id="@+id/checkBox18"-->
+        <!--            android:layout_width="10.5dp"-->
+        <!--            android:layout_height="11dp"-->
+        <!--            android:layout_weight="1"-->
+        <!--            android:checked="true"-->
+        <!--            android:clickable="false"-->
+        <!--            android:scaleX="0.7"-->
+        <!--            android:scaleY="0.7" />-->
+
+        <!--        <CheckBox-->
+        <!--            android:id="@+id/checkBox19"-->
+        <!--            android:layout_width="10.5dp"-->
+        <!--            android:layout_height="11dp"-->
+        <!--            android:layout_weight="1"-->
+        <!--            android:checked="true"-->
+        <!--            android:clickable="false"-->
+        <!--            android:scaleX="0.7"-->
+        <!--            android:scaleY="0.7" />-->
+
+        <!--        <CheckBox-->
+        <!--            android:id="@+id/checkBox20"-->
+        <!--            android:layout_width="10.5dp"-->
+        <!--            android:layout_height="11dp"-->
+        <!--            android:layout_weight="1"-->
+        <!--            android:checked="true"-->
+        <!--            android:clickable="false"-->
+        <!--            android:scaleX="0.7"-->
+        <!--            android:scaleY="0.7" />-->
+
+        <!--        <CheckBox-->
+        <!--            android:id="@+id/checkBox21"-->
+        <!--            android:layout_width="10.5dp"-->
+        <!--            android:layout_height="11dp"-->
+        <!--            android:layout_weight="1"-->
+        <!--            android:checked="true"-->
+        <!--            android:clickable="false"-->
+        <!--            android:scaleX="0.7"-->
+        <!--            android:scaleY="0.7" />-->
+
+        <!--        <CheckBox-->
+        <!--            android:id="@+id/checkBox22"-->
+        <!--            android:layout_width="10.5dp"-->
+        <!--            android:layout_height="11dp"-->
+        <!--            android:layout_weight="1"-->
+        <!--            android:checked="true"-->
+        <!--            android:clickable="false"-->
+        <!--            android:scaleX="0.7"-->
+        <!--            android:scaleY="0.7" />-->
+
+        <!--        <CheckBox-->
+        <!--            android:id="@+id/checkBox23"-->
+        <!--            android:layout_width="10.5dp"-->
+        <!--            android:layout_height="11dp"-->
+        <!--            android:layout_weight="1"-->
+        <!--            android:checked="true"-->
+        <!--            android:clickable="false"-->
+        <!--            android:scaleX="0.7"-->
+        <!--            android:scaleY="0.7" />-->
+
+        <!--        <CheckBox-->
+        <!--            android:id="@+id/checkBox24"-->
+        <!--            android:layout_width="10.5dp"-->
+        <!--            android:layout_height="11dp"-->
+        <!--            android:layout_weight="1"-->
+        <!--            android:checked="true"-->
+        <!--            android:clickable="false"-->
+        <!--            android:scaleX="0.7"-->
+        <!--            android:scaleY="0.7" />-->
+
+        <!--        <CheckBox-->
+        <!--            android:id="@+id/checkBox25"-->
+        <!--            android:layout_width="10.5dp"-->
+        <!--            android:layout_height="11dp"-->
+        <!--            android:layout_weight="1"-->
+        <!--            android:checked="true"-->
+        <!--            android:clickable="false"-->
+        <!--            android:scaleX="0.7"-->
+        <!--            android:scaleY="0.7" />-->
+
+        <!--        <CheckBox-->
+        <!--            android:id="@+id/checkBox26"-->
+        <!--            android:layout_width="10.5dp"-->
+        <!--            android:layout_height="11dp"-->
+        <!--            android:layout_weight="1"-->
+        <!--            android:checked="true"-->
+        <!--            android:clickable="false"-->
+        <!--            android:scaleX="0.7"-->
+        <!--            android:scaleY="0.7" />-->
+
+        <!--        <CheckBox-->
+        <!--            android:id="@+id/checkBox27"-->
+        <!--            android:layout_width="10.5dp"-->
+        <!--            android:layout_height="11dp"-->
+        <!--            android:layout_weight="1"-->
+        <!--            android:checked="true"-->
+        <!--            android:clickable="false"-->
+        <!--            android:scaleX="0.7"-->
+        <!--            android:scaleY="0.7" />-->
+
+        <!--        <CheckBox-->
+        <!--            android:id="@+id/checkBox28"-->
+        <!--            android:layout_width="10.5dp"-->
+        <!--            android:layout_height="11dp"-->
+        <!--            android:layout_weight="1"-->
+        <!--            android:checked="true"-->
+        <!--            android:clickable="false"-->
+        <!--            android:scaleX="0.7"-->
+        <!--            android:scaleY="0.7" />-->
+
+        <!--        <CheckBox-->
+        <!--            android:id="@+id/checkBox29"-->
+        <!--            android:layout_width="10.5dp"-->
+        <!--            android:layout_height="11dp"-->
+        <!--            android:layout_weight="1"-->
+        <!--            android:checked="true"-->
+        <!--            android:clickable="false"-->
+        <!--            android:scaleX="0.7"-->
+        <!--            android:scaleY="0.7" />-->
+
+        <!--        <CheckBox-->
+        <!--            android:id="@+id/checkBox30"-->
+        <!--            android:layout_width="10.5dp"-->
+        <!--            android:layout_height="11dp"-->
+        <!--            android:layout_weight="1"-->
+        <!--            android:checked="true"-->
+        <!--            android:clickable="false"-->
+        <!--            android:scaleX="0.7"-->
+        <!--            android:scaleY="0.7" />-->
+
+        <!--        <CheckBox-->
+        <!--            android:id="@+id/checkBox31"-->
+        <!--            android:layout_width="10.5dp"-->
+        <!--            android:layout_height="11dp"-->
+        <!--            android:layout_weight="1"-->
+        <!--            android:checked="true"-->
+        <!--            android:clickable="false"-->
+        <!--            android:scaleX="0.7"-->
+        <!--            android:scaleY="0.7" />-->
+
+        <!--        <CheckBox-->
+        <!--            android:id="@+id/checkBox32"-->
+        <!--            android:layout_width="10.5dp"-->
+        <!--            android:layout_height="11dp"-->
+        <!--            android:layout_weight="1"-->
+        <!--            android:checked="true"-->
+        <!--            android:clickable="false"-->
+        <!--            android:scaleX="0.7"-->
+        <!--            android:scaleY="0.7" />-->
+
+        <!--        <CheckBox-->
+        <!--            android:id="@+id/checkBox33"-->
+        <!--            android:layout_width="10.5dp"-->
+        <!--            android:layout_height="11dp"-->
+        <!--            android:layout_weight="1"-->
+        <!--            android:checked="true"-->
+        <!--            android:clickable="false"-->
+        <!--            android:scaleX="0.7"-->
+        <!--            android:scaleY="0.7" />-->
+
+        <!--        <CheckBox-->
+        <!--            android:id="@+id/checkBox34"-->
+        <!--            android:layout_width="10.5dp"-->
+        <!--            android:layout_height="11dp"-->
+        <!--            android:layout_weight="1"-->
+        <!--            android:checked="true"-->
+        <!--            android:clickable="false"-->
+        <!--            android:scaleX="0.7"-->
+        <!--            android:scaleY="0.7" />-->
+
+        <!--        <CheckBox-->
+        <!--            android:id="@+id/checkBox35"-->
+        <!--            android:layout_width="10.5dp"-->
+        <!--            android:layout_height="11dp"-->
+        <!--            android:layout_weight="1"-->
+        <!--            android:checked="true"-->
+        <!--            android:clickable="false"-->
+        <!--            android:scaleX="0.7"-->
+        <!--            android:scaleY="0.7" />-->
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/bigMargin"
+        android:text="Ver resultado"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerQuestions"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/btnResult"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/containerChecks"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/smallMargin"
+        android:layout_marginEnd="@dimen/smallMargin"
+        android:clickable="false"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/smallMargin"
+        android:paddingTop="@dimen/smallMargin"
+        android:paddingEnd="@dimen/smallMargin"
+        android:paddingBottom="@dimen/smallMargin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btnResult">
+
+        <!--        <CheckBox-->
+        <!--            android:id="@+id/checkBox0"-->
+        <!--            android:layout_width="10.5dp"-->
+        <!--            android:layout_height="11dp"-->
+        <!--            android:checked="true"-->
+        <!--            android:clickable="false"-->
+        <!--            android:scaleX="0.7"-->
+        <!--            android:scaleY="0.7" />-->
+
+        <!--        <CheckBox-->
+        <!--            android:id="@+id/checkBox1"-->
+        <!--            android:layout_width="10.5dp"-->
+        <!--            android:layout_height="11dp"-->
+        <!--            android:layout_weight="1"-->
+        <!--            android:checked="true"-->
+        <!--            android:clickable="false"-->
+        <!--            android:scaleX="0.7"-->
+        <!--            android:scaleY="0.7" />-->
+
+        <!--        <CheckBox-->
+        <!--            android:id="@+id/checkBox2"-->
+        <!--            android:layout_width="10.5dp"-->
+        <!--            android:layout_height="11dp"-->
+        <!--            android:layout_weight="1"-->
+        <!--            android:checked="true"-->
+        <!--            android:clickable="false"-->
+        <!--            android:scaleX="0.7"-->
+        <!--            android:scaleY="0.7" />-->
+
+        <!--        <CheckBox-->
+        <!--            android:id="@+id/checkBox3"-->
+        <!--            android:layout_width="10.5dp"-->
+        <!--            android:layout_height="11dp"-->
+        <!--            android:checked="true"-->
+        <!--            android:clickable="false"-->
+        <!--            android:scaleX="0.7"-->
+        <!--            android:scaleY="0.7" />-->
+
+        <!--        <CheckBox-->
+        <!--            android:id="@+id/checkBox4"-->
+        <!--            android:layout_width="10.5dp"-->
+        <!--            android:layout_height="11dp"-->
+        <!--            android:checked="true"-->
+        <!--            android:clickable="false"-->
+        <!--            android:scaleX="0.7"-->
+        <!--            android:scaleY="0.7" />-->
+
+        <!--        <CheckBox-->
+        <!--            android:id="@+id/checkBox5"-->
+        <!--            android:layout_width="10.5dp"-->
+        <!--            android:layout_height="11dp"-->
+        <!--            android:layout_weight="1"-->
+        <!--            android:checked="true"-->
+        <!--            android:clickable="false"-->
+        <!--            android:scaleX="0.7"-->
+        <!--            android:scaleY="0.7" />-->
+
+        <!--        <CheckBox-->
+        <!--            android:id="@+id/checkBox6"-->
+        <!--            android:layout_width="10.5dp"-->
+        <!--            android:layout_height="11dp"-->
+        <!--            android:layout_weight="1"-->
+        <!--            android:checked="true"-->
+        <!--            android:clickable="false"-->
+        <!--            android:scaleX="0.7"-->
+        <!--            android:scaleY="0.7" />-->
+
+        <!--        <CheckBox-->
+        <!--            android:id="@+id/checkBox7"-->
+        <!--            android:layout_width="10.5dp"-->
+        <!--            android:layout_height="11dp"-->
+        <!--            android:layout_weight="1"-->
+        <!--            android:checked="true"-->
+        <!--            android:clickable="false"-->
+        <!--            android:scaleX="0.7"-->
+        <!--            android:scaleY="0.7" />-->
+
+        <!--        <CheckBox-->
+        <!--            android:id="@+id/checkBox8"-->
+        <!--            android:layout_width="10.5dp"-->
+        <!--            android:layout_height="11dp"-->
+        <!--            android:layout_weight="1"-->
+        <!--            android:checked="true"-->
+        <!--            android:clickable="false"-->
+        <!--            android:scaleX="0.7"-->
+        <!--            android:scaleY="0.7" />-->
+
+        <!--        <CheckBox-->
+        <!--            android:id="@+id/checkBox9"-->
+        <!--            android:layout_width="10.5dp"-->
+        <!--            android:layout_height="11dp"-->
+        <!--            android:layout_weight="1"-->
+        <!--            android:checked="true"-->
+        <!--            android:clickable="false"-->
+        <!--            android:scaleX="0.7"-->
+        <!--            android:scaleY="0.7" />-->
+
+        <!--        <CheckBox-->
+        <!--            android:id="@+id/checkBox10"-->
+        <!--            android:layout_width="10.5dp"-->
+        <!--            android:layout_height="11dp"-->
+        <!--            android:layout_weight="1"-->
+        <!--            android:checked="true"-->
+        <!--            android:clickable="false"-->
+        <!--            android:scaleX="0.7"-->
+        <!--            android:scaleY="0.7" />-->
+
+        <!--        <CheckBox-->
+        <!--            android:id="@+id/checkBox11"-->
+        <!--            android:layout_width="10.5dp"-->
+        <!--            android:layout_height="11dp"-->
+        <!--            android:layout_weight="1"-->
+        <!--            android:checked="true"-->
+        <!--            android:clickable="false"-->
+        <!--            android:scaleX="0.7"-->
+        <!--            android:scaleY="0.7" />-->
+
+        <!--        <CheckBox-->
+        <!--            android:id="@+id/checkBox12"-->
+        <!--            android:layout_width="10.5dp"-->
+        <!--            android:layout_height="11dp"-->
+        <!--            android:layout_weight="1"-->
+        <!--            android:checked="true"-->
+        <!--            android:clickable="false"-->
+        <!--            android:scaleX="0.7"-->
+        <!--            android:scaleY="0.7" />-->
+
+        <!--        <CheckBox-->
+        <!--            android:id="@+id/checkBox13"-->
+        <!--            android:layout_width="10.5dp"-->
+        <!--            android:layout_height="11dp"-->
+        <!--            android:layout_weight="1"-->
+        <!--            android:checked="true"-->
+        <!--            android:clickable="false"-->
+        <!--            android:scaleX="0.7"-->
+        <!--            android:scaleY="0.7" />-->
+
+        <!--        <CheckBox-->
+        <!--            android:id="@+id/checkBox14"-->
+        <!--            android:layout_width="10.5dp"-->
+        <!--            android:layout_height="11dp"-->
+        <!--            android:layout_weight="1"-->
+        <!--            android:checked="true"-->
+        <!--            android:clickable="false"-->
+        <!--            android:scaleX="0.7"-->
+        <!--            android:scaleY="0.7" />-->
+
+        <!--        <CheckBox-->
+        <!--            android:id="@+id/checkBox15"-->
+        <!--            android:layout_width="10.5dp"-->
+        <!--            android:layout_height="11dp"-->
+        <!--            android:layout_weight="1"-->
+        <!--            android:checked="true"-->
+        <!--            android:clickable="false"-->
+        <!--            android:scaleX="0.7"-->
+        <!--            android:scaleY="0.7" />-->
+
+        <!--        <CheckBox-->
+        <!--            android:id="@+id/checkBox16"-->
+        <!--            android:layout_width="10.5dp"-->
+        <!--            android:layout_height="11dp"-->
+        <!--            android:layout_weight="1"-->
+        <!--            android:checked="true"-->
+        <!--            android:clickable="false"-->
+        <!--            android:scaleX="0.7"-->
+        <!--            android:scaleY="0.7" />-->
+
+        <!--        <CheckBox-->
+        <!--            android:id="@+id/checkBox17"-->
+        <!--            android:layout_width="10.5dp"-->
+        <!--            android:layout_height="11dp"-->
+        <!--            android:layout_weight="1"-->
+        <!--            android:checked="true"-->
+        <!--            android:clickable="false"-->
+        <!--            android:scaleX="0.7"-->
+        <!--            android:scaleY="0.7" />-->
+
+        <!--        <CheckBox-->
+        <!--            android:id="@+id/checkBox18"-->
+        <!--            android:layout_width="10.5dp"-->
+        <!--            android:layout_height="11dp"-->
+        <!--            android:layout_weight="1"-->
+        <!--            android:checked="true"-->
+        <!--            android:clickable="false"-->
+        <!--            android:scaleX="0.7"-->
+        <!--            android:scaleY="0.7" />-->
+
+        <!--        <CheckBox-->
+        <!--            android:id="@+id/checkBox19"-->
+        <!--            android:layout_width="10.5dp"-->
+        <!--            android:layout_height="11dp"-->
+        <!--            android:layout_weight="1"-->
+        <!--            android:checked="true"-->
+        <!--            android:clickable="false"-->
+        <!--            android:scaleX="0.7"-->
+        <!--            android:scaleY="0.7" />-->
+
+        <!--        <CheckBox-->
+        <!--            android:id="@+id/checkBox20"-->
+        <!--            android:layout_width="10.5dp"-->
+        <!--            android:layout_height="11dp"-->
+        <!--            android:layout_weight="1"-->
+        <!--            android:checked="true"-->
+        <!--            android:clickable="false"-->
+        <!--            android:scaleX="0.7"-->
+        <!--            android:scaleY="0.7" />-->
+
+        <!--        <CheckBox-->
+        <!--            android:id="@+id/checkBox21"-->
+        <!--            android:layout_width="10.5dp"-->
+        <!--            android:layout_height="11dp"-->
+        <!--            android:layout_weight="1"-->
+        <!--            android:checked="true"-->
+        <!--            android:clickable="false"-->
+        <!--            android:scaleX="0.7"-->
+        <!--            android:scaleY="0.7" />-->
+
+        <!--        <CheckBox-->
+        <!--            android:id="@+id/checkBox22"-->
+        <!--            android:layout_width="10.5dp"-->
+        <!--            android:layout_height="11dp"-->
+        <!--            android:layout_weight="1"-->
+        <!--            android:checked="true"-->
+        <!--            android:clickable="false"-->
+        <!--            android:scaleX="0.7"-->
+        <!--            android:scaleY="0.7" />-->
+
+        <!--        <CheckBox-->
+        <!--            android:id="@+id/checkBox23"-->
+        <!--            android:layout_width="10.5dp"-->
+        <!--            android:layout_height="11dp"-->
+        <!--            android:layout_weight="1"-->
+        <!--            android:checked="true"-->
+        <!--            android:clickable="false"-->
+        <!--            android:scaleX="0.7"-->
+        <!--            android:scaleY="0.7" />-->
+
+        <!--        <CheckBox-->
+        <!--            android:id="@+id/checkBox24"-->
+        <!--            android:layout_width="10.5dp"-->
+        <!--            android:layout_height="11dp"-->
+        <!--            android:layout_weight="1"-->
+        <!--            android:checked="true"-->
+        <!--            android:clickable="false"-->
+        <!--            android:scaleX="0.7"-->
+        <!--            android:scaleY="0.7" />-->
+
+        <!--        <CheckBox-->
+        <!--            android:id="@+id/checkBox25"-->
+        <!--            android:layout_width="10.5dp"-->
+        <!--            android:layout_height="11dp"-->
+        <!--            android:layout_weight="1"-->
+        <!--            android:checked="true"-->
+        <!--            android:clickable="false"-->
+        <!--            android:scaleX="0.7"-->
+        <!--            android:scaleY="0.7" />-->
+
+        <!--        <CheckBox-->
+        <!--            android:id="@+id/checkBox26"-->
+        <!--            android:layout_width="10.5dp"-->
+        <!--            android:layout_height="11dp"-->
+        <!--            android:layout_weight="1"-->
+        <!--            android:checked="true"-->
+        <!--            android:clickable="false"-->
+        <!--            android:scaleX="0.7"-->
+        <!--            android:scaleY="0.7" />-->
+
+        <!--        <CheckBox-->
+        <!--            android:id="@+id/checkBox27"-->
+        <!--            android:layout_width="10.5dp"-->
+        <!--            android:layout_height="11dp"-->
+        <!--            android:layout_weight="1"-->
+        <!--            android:checked="true"-->
+        <!--            android:clickable="false"-->
+        <!--            android:scaleX="0.7"-->
+        <!--            android:scaleY="0.7" />-->
+
+        <!--        <CheckBox-->
+        <!--            android:id="@+id/checkBox28"-->
+        <!--            android:layout_width="10.5dp"-->
+        <!--            android:layout_height="11dp"-->
+        <!--            android:layout_weight="1"-->
+        <!--            android:checked="true"-->
+        <!--            android:clickable="false"-->
+        <!--            android:scaleX="0.7"-->
+        <!--            android:scaleY="0.7" />-->
+
+        <!--        <CheckBox-->
+        <!--            android:id="@+id/checkBox29"-->
+        <!--            android:layout_width="10.5dp"-->
+        <!--            android:layout_height="11dp"-->
+        <!--            android:layout_weight="1"-->
+        <!--            android:checked="true"-->
+        <!--            android:clickable="false"-->
+        <!--            android:scaleX="0.7"-->
+        <!--            android:scaleY="0.7" />-->
+
+        <!--        <CheckBox-->
+        <!--            android:id="@+id/checkBox30"-->
+        <!--            android:layout_width="10.5dp"-->
+        <!--            android:layout_height="11dp"-->
+        <!--            android:layout_weight="1"-->
+        <!--            android:checked="true"-->
+        <!--            android:clickable="false"-->
+        <!--            android:scaleX="0.7"-->
+        <!--            android:scaleY="0.7" />-->
+
+        <!--        <CheckBox-->
+        <!--            android:id="@+id/checkBox31"-->
+        <!--            android:layout_width="10.5dp"-->
+        <!--            android:layout_height="11dp"-->
+        <!--            android:layout_weight="1"-->
+        <!--            android:checked="true"-->
+        <!--            android:clickable="false"-->
+        <!--            android:scaleX="0.7"-->
+        <!--            android:scaleY="0.7" />-->
+
+        <!--        <CheckBox-->
+        <!--            android:id="@+id/checkBox32"-->
+        <!--            android:layout_width="10.5dp"-->
+        <!--            android:layout_height="11dp"-->
+        <!--            android:layout_weight="1"-->
+        <!--            android:checked="true"-->
+        <!--            android:clickable="false"-->
+        <!--            android:scaleX="0.7"-->
+        <!--            android:scaleY="0.7" />-->
+
+        <!--        <CheckBox-->
+        <!--            android:id="@+id/checkBox33"-->
+        <!--            android:layout_width="10.5dp"-->
+        <!--            android:layout_height="11dp"-->
+        <!--            android:layout_weight="1"-->
+        <!--            android:checked="true"-->
+        <!--            android:clickable="false"-->
+        <!--            android:scaleX="0.7"-->
+        <!--            android:scaleY="0.7" />-->
+
+        <!--        <CheckBox-->
+        <!--            android:id="@+id/checkBox34"-->
+        <!--            android:layout_width="10.5dp"-->
+        <!--            android:layout_height="11dp"-->
+        <!--            android:layout_weight="1"-->
+        <!--            android:checked="true"-->
+        <!--            android:clickable="false"-->
+        <!--            android:scaleX="0.7"-->
+        <!--            android:scaleY="0.7" />-->
+
+        <!--        <CheckBox-->
+        <!--            android:id="@+id/checkBox35"-->
+        <!--            android:layout_width="10.5dp"-->
+        <!--            android:layout_height="11dp"-->
+        <!--            android:layout_weight="1"-->
+        <!--            android:checked="true"-->
+        <!--            android:clickable="false"-->
+        <!--            android:scaleX="0.7"-->
+        <!--            android:scaleY="0.7" />-->
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

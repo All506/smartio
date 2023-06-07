@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">Smartio</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="pregunta1">¿Eres capaz de visualizar con claridad objetos en tres dimensiones y manipular mentalmente su posición?</string>
+    <string name="pregunta2">¿Tienes facilidad para resolver acertijos visuales y problemas de geometría?</string>
+    <string name="pregunta3">¿Disfrutas realizar actividades que requieren habilidades espaciales, como el dibujo o la navegación en entornos virtuales?</string>
+    <string name="pregunta4">¿Eres capaz de identificar con precisión diferentes tonalidades y reconocer patrones musicales complejos?</string>
+    <string name="pregunta5">¿Disfrutas colaborar con otros músicos y sientes una conexión emocional durante la interpretación conjunta?</string>
+    <string name="pregunta6">¿Tienes facilidad para crear letras y componer canciones con contenido significativo?</string>
+    <string name="pregunta7">¿Tienes una amplia capacidad para expresarte de forma clara y persuasiva tanto de forma oral como escrita?</string>
+    <string name="pregunta8">¿Disfrutas resolver problemas de lógica basados en palabras y razonamiento verbal?</string>
+    <string name="pregunta9">¿Te sientes cómodo(a) utilizando el diálogo interno para reflexionar y analizar tus propias ideas y emociones?</string>
+    <string name="pregunta10">¿Tienes facilidad para identificar patrones numéricos y resolver problemas matemáticos complejos?</string>
+    <string name="pregunta11">¿Disfrutas de la resolución de problemas lógicos y te sientes satisfecho(a) al encontrar soluciones?</string>
+    <string name="pregunta12">¿Eres capaz de aplicar conceptos matemáticos en actividades físicas, como el cálculo de trayectorias o la estimación de distancias?</string>
+    <string name="pregunta13">¿Tienes una excelente coordinación motora y habilidades destacadas en actividades físicas y deportes?</string>
+    <string name="pregunta14">¿Te sientes cómodo(a) trabajando en equipo y adaptándote a diferentes roles dentro de actividades físicas grupales?</string>
+    <string name="pregunta15">¿Tienes habilidades para interactuar y relacionarte con animales y plantas, y disfrutas de actividades al aire libre?</string>
+    <string name="pregunta16">¿Tienes una profunda conciencia de tus propios pensamientos, emociones y motivaciones?</string>
+    <string name="pregunta17">¿Disfrutas reflexionar sobre el propósito y el significado de tu vida?</string>
+    <string name="pregunta18">¿Eres capaz de reconocer y regular tus emociones de manera efectiva?</string>
+    <string name="pregunta19">¿Eres capaz de comprender y responder adecuadamente a las emociones y señales no verbales de los demás?</string>
+    <string name="pregunta20">¿Te sientes conectado(a) y en armonía con la naturaleza y los seres vivos que te rodean?</string>
+    <string name="pregunta21">¿Eres hábil para construir y mantener relaciones interpersonales positivas y significativas?</string>
+    <string name="pregunta22">¿Tienes habilidades sobresalientes para identificar y clasificar diferentes elementos de la naturaleza?</string>
+    <string name="pregunta23">¿Disfrutas de la lectura y el estudio sobre temas relacionados con la naturaleza y los fenómenos naturales?</string>
+    <string name="pregunta24">¿Te sientes a gusto realizando actividades al aire libre y explorando diferentes entornos naturales?</string>
+    <string name="pregunta25">¿Reflexionas frecuentemente sobre el propósito y el significado de la vida?</string>
+    <string name="pregunta26">¿Te sientes profundamente conectado(a) con el mundo y tienes una fuerte sensibilidad hacia las experiencias humanas?</string>
+    <string name="pregunta27">¿Eres capaz de generar ideas y perspectivas originales en torno a temas filosóficos y trascendentales?</string>
+    <string name="pregunta28">¿Tienes facilidad para expresarte a través de medios artísticos y encontrar nuevas formas de comunicar tus ideas?</string>
+    <string name="pregunta29">¿Disfrutas explorar y experimentar con diferentes combinaciones de colores, formas y texturas en tus proyectos creativos?</string>
+    <string name="pregunta30">¿Te sientes inspirado(a) y motivado(a) por la colaboración creativa con otras personas?</string>
+    <string name="pregunta31">¿Eres consciente de tus propias emociones y capaz de manejarlas de manera saludable?</string>
+    <string name="pregunta32">¿Tienes habilidades para comprender las emociones de los demás y establecer relaciones empáticas?</string>
+    <string name="pregunta33">¿Disfrutas trabajar en equipo y colaborar con otros para crear un ambiente emocionalmente positivo?</string>
+    <string name="pregunta34">¿Eres capaz de fomentar la comunicación y la cooperación entre los miembros de un equipo?</string>
+    <string name="pregunta35">¿Tienes la habilidad de adaptarte a diferentes roles y tareas dentro de un grupo de trabajo?</string>
+    <string name="pregunta36">¿Eres hábil para facilitar la expresión de ideas y opiniones de los demás durante actividades colaborativas?</string>
+
+
+</resources>
