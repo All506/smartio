@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import android.widget.CheckBox
 import androidx.recyclerview.widget.RecyclerView
 import com.example.smartio.R
+import com.example.smartio.domain.Question
 
 class QuestionsAdapter(private val items: List<Question>, private val checkList: List<View>) :
     RecyclerView.Adapter<QuestionsViewHolder>() {

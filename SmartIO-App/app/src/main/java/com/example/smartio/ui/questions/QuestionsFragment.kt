@@ -3,7 +3,6 @@ package com.example.smartio.ui.questions
 import android.content.Context
 import android.content.res.ColorStateList
 import android.graphics.Color
-import android.graphics.PorterDuffColorFilter
 import android.os.Bundle
 import android.os.Handler
 import android.view.LayoutInflater
@@ -13,7 +12,6 @@ import android.view.animation.AccelerateInterpolator
 import android.widget.CheckBox
 import android.widget.LinearLayout
 import android.widget.RelativeLayout
-import android.widget.SeekBar
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -21,8 +19,8 @@ import androidx.recyclerview.widget.PagerSnapHelper
 import androidx.recyclerview.widget.RecyclerView
 import com.example.smartio.R
 import com.example.smartio.databinding.FragmentQuestionsBinding
-import com.example.smartio.ui.questions.adapter.Question
-import com.example.smartio.ui.questions.adapter.Questions
+import com.example.smartio.domain.Question
+import com.example.smartio.domain.QuestionFactory
 import com.example.smartio.ui.questions.adapter.QuestionsAdapter
 
 
@@ -44,7 +42,16 @@ class QuestionsFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         _binding = FragmentQuestionsBinding.bind(view)
 
-        val questions = Questions(requireContext()).getQuestions()
+        val questions = QuestionFactory(requireContext()).getQuestions()
+
+        binding.btnResult.setOnClickListener {
+            if(QuestionFactory(requireContext()).allQuestionsAnswered(questions)){
+                //TODO Euclides aqui
+
+            }
+        }
+
+
 
         iniciarRecyclerView(
             context,
@@ -137,7 +144,7 @@ class QuestionsFragment : Fragment() {
                         checkList[pos].buttonTintList =
                             ColorStateList.valueOf(getColorForProgress(questions[pos!!].answer))
 
-                        if(Questions(requireContext()).allQuestionsAnswered(questions)){
+                        if(QuestionFactory(requireContext()).allQuestionsAnswered(questions)){
                             btnResult.visibility = View.VISIBLE
                             containerChecks.visibility = View.GONE
                             containerChecks2.visibility = View.GONE

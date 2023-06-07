@@ -5,12 +5,9 @@ import android.graphics.Color
 import android.view.View
 import android.widget.CheckBox
 import android.widget.SeekBar
-import androidx.core.content.ContentProviderCompat.requireContext
-import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
-import com.example.smartio.R
 import com.example.smartio.databinding.ItemQuestionBinding
-import com.example.smartio.ui.questions.QuestionsFragment
+import com.example.smartio.domain.Question
 
 class QuestionsViewHolder(val view: View) : RecyclerView.ViewHolder(view) {
     private val binding = ItemQuestionBinding.bind(view)

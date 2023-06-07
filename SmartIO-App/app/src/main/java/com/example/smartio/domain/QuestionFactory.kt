@@ -1,9 +1,9 @@
-package com.example.smartio.ui.questions.adapter
+package com.example.smartio.domain
 
 import android.content.Context
 import com.example.smartio.R
 
-class Questions(private val context: Context) {
+class QuestionFactory(private val context: Context) {
 
     fun getQuestions(): List<Question> {
         return listOf(

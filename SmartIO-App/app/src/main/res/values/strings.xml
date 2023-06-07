@@ -2,7 +2,6 @@
     <string name="app_name">Smartio</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-
     <string name="pregunta1">¿Eres capaz de visualizar con claridad objetos en tres dimensiones y manipular mentalmente su posición?</string>
     <string name="pregunta2">¿Tienes facilidad para resolver acertijos visuales y problemas de geometría?</string>
     <string name="pregunta3">¿Disfrutas realizar actividades que requieren habilidades espaciales, como el dibujo o la navegación en entornos virtuales?</string>
