@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.smartio.R
 import com.example.smartio.databinding.FragmentResultsBinding
+import com.example.smartio.domain.IntelligenceComputation
 
 class ResultsFragment : Fragment() {
 
@@ -26,7 +27,13 @@ class ResultsFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         _binding = FragmentResultsBinding.bind(view)
 
+        binding.apply {
+            lblIntelligence.text =
+                IntelligenceComputation.instance?.getIntelligence() ?: ""
+            lblDescription.text =
+                IntelligenceComputation.instance?.getIntelligenceDescription() ?: ""
 
+        }
 
     }
 }

@@ -1,5 +1,6 @@
 package com.example.smartio.ui.questions
 
+import androidx.fragment.app.Fragment
 import android.content.Context
 import android.content.res.ColorStateList
 import android.graphics.Color
@@ -13,7 +14,6 @@ import android.widget.CheckBox
 import android.widget.LinearLayout
 import android.widget.RelativeLayout
 import androidx.core.content.ContextCompat
-import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.PagerSnapHelper
@@ -23,7 +23,6 @@ import com.example.smartio.databinding.FragmentQuestionsBinding
 import com.example.smartio.domain.IntelligenceComputation
 import com.example.smartio.domain.Question
 import com.example.smartio.domain.QuestionFactory
-import com.example.smartio.domain.WeightMatrix
 import com.example.smartio.ui.questions.adapter.QuestionsAdapter
 
 
@@ -49,17 +48,17 @@ class QuestionsFragment : Fragment() {
 
 
         binding.btnResult.setOnClickListener {
-            if(QuestionFactory(requireContext()).allQuestionsAnswered(questions)){
+            if (QuestionFactory(requireContext()).allQuestionsAnswered(questions)) {
 
                 val answers = mutableListOf<Int>()
 
-                for (question in questions){
+                for (question in questions) {
                     answers.add(question.answer)
                 }
 
                 val intelligenceComputation = IntelligenceComputation(answers)
 
-                val userIntelligence = intelligenceComputation.getIntelligence()
+                intelligenceComputation.getIntelligence()
 
                 findNavController().navigate(R.id.action_questionsFragment_to_resultsFragment)
             }
@@ -98,9 +97,9 @@ class QuestionsFragment : Fragment() {
                 checkBox.scaleX = 1.2f
                 checkBox.scaleY = 1.2f
 
-                if (i<18) {
+                if (i < 18) {
                     containerChecks.addView(checkBox)
-                }else{
+                } else {
                     containerChecks2.addView(checkBox)
                 }
 
@@ -157,7 +156,7 @@ class QuestionsFragment : Fragment() {
                         checkList[pos].buttonTintList =
                             ColorStateList.valueOf(getColorForProgress(questions[pos!!].answer))
 
-                        if(QuestionFactory(requireContext()).allQuestionsAnswered(questions)){
+                        if (QuestionFactory(requireContext()).allQuestionsAnswered(questions)) {
                             btnResult.visibility = View.VISIBLE
                             containerChecks.visibility = View.GONE
                             containerChecks2.visibility = View.GONE

@@ -26,5 +26,6 @@
     <fragment
         android:id="@+id/resultsFragment"
         android:name="com.example.smartio.ui.ResultsFragment"
-        android:label="ResultsFragment" />
+        android:label="ResultsFragment" >
+    </fragment>
 </navigation>

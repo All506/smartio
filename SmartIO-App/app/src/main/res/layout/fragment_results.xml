@@ -33,7 +33,7 @@
             app:layout_constraintTop_toBottomOf="@+id/constraintLayout3">
 
             <TextView
-                android:id="@+id/textView12"
+                android:id="@+id/lblPersonas"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/smallMargin"
@@ -71,7 +71,7 @@
             app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
 
             <TextView
-                android:id="@+id/textView11"
+                android:id="@+id/lblDescription"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/smallMargin"
@@ -108,7 +108,7 @@
             app:layout_constraintTop_toBottomOf="@+id/textView6">
 
             <TextView
-                android:id="@+id/textView8"
+                android:id="@+id/lblIntelligence"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/smallMargin"

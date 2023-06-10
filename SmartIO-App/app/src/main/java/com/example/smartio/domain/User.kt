@@ -1,7 +1,6 @@
 package com.example.smartio.domain
 
 import java.io.Serializable
-import java.io.StreamCorruptedException
 
 data class User(
 
@@ -9,6 +8,12 @@ data class User(
     val name: String,
     val email: String,
     val password: String,
-    val scores: List<IntelligenseScore>? = null,
+    val scores: List<IntelligenceScore>? = null,
 
-    ) : Serializable
+    ){
+    companion object {
+        var actualUser: User? = null
+    }
+
+}
+

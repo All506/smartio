@@ -86,6 +86,7 @@ class LoginFragment : Fragment() {
                                     val intent = Intent(activity, HomeActivity::class.java)
                                     startActivity(intent)
                                     activity?.finish()
+                                    User.actualUser = it
                                     Toast.makeText(
                                         requireContext(),
                                         "Bienvenido ${it.name}",
