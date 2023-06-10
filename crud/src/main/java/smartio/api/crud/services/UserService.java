@@ -70,5 +70,15 @@ public class UserService {
         return user.getPassword().equals(password);
     }
 
+    //--------------------------------------
+
+
+    public UserModel getUserByEmail(String email){
+
+        UserModel user = userRepository.findByEmail(email);
+
+        return user;
+    }
+
 
 }

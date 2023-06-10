@@ -23,9 +23,6 @@ public class UserModel {
     @Column
     private String password;
 
-    @OneToMany(mappedBy="user")
-    List<UserIntelligenceModel> userList;
-
     public Long getId() {
         return id;
     }
@@ -58,11 +55,4 @@ public class UserModel {
         this.password = password;
     }
 
-    public List<UserIntelligenceModel> getUserList() {
-        return userList;
-    }
-
-    public void setUserList(List<UserIntelligenceModel> userList) {
-        this.userList = userList;
-    }
 }
