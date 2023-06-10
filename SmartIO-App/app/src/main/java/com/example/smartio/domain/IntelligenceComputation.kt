@@ -1,42 +1,44 @@
 package com.example.smartio.domain
 
+import kotlin.math.sqrt
+
 class IntelligenceComputation(private val numbers: List<Int>) {
 
     val weightMatrixInstance = WeightMatrix()
 
-    fun multiplyWithWeightMatrix(): List<List<Int>> {
-        val resultMatrix = mutableListOf<List<Int>>()
-        for (row in weightMatrixInstance.getWeightMatrix()) {
-            val resultRow = mutableListOf<Int>()
-            for (i in row.indices) {
-                resultRow.add(row[i] * numbers[i])
+
+    fun calEuclideanDistance(): List<Pair<Int, Double>> {
+        val distances = mutableListOf<Pair<Int, Double>>() // Lista de pares (índice de inteligencia, distancia euclidiana)
+
+        for ((i, weights) in weightMatrixInstance.getWeightMatrix().withIndex()) {
+            var squaresSum = 0.0
+
+            for ((i, response) in numbers.withIndex()) {
+                val diference = response - weights[i]
+                squaresSum += Math.pow(diference.toDouble(), 2.0)
             }
-            resultMatrix.add(resultRow)
+
+            val distance = sqrt(squaresSum)
+            distances.add(Pair(i, distance))
         }
-        return resultMatrix
+        return distances;
     }
 
-    fun sumRows(): List<Int> {
-        val result = mutableListOf<Int>()
-        for (row in multiplyWithWeightMatrix()) {
-            val sum = row.sum()
-            result.add(sum)
-        }
-        return result
-    }
+    fun getLesserIndexDistance(): Int {
+        val distances = calEuclideanDistance()
+        var indexMinorDistance = -1
+        var shorterDistance = Double.MAX_VALUE
 
-    fun getMaxPosition(): Int {
-        var max = Int.MIN_VALUE
-        var maxPosition = -1
-
-        for ((index, sum) in sumRows().withIndex()) {
-            if (sum > max) {
-                max = sum
-                maxPosition = index
+        for ((i, distance) in distances) {
+            if (distance < shorterDistance) {
+                shorterDistance = distance
+                indexMinorDistance = i
             }
         }
-        return maxPosition
+
+        return indexMinorDistance
     }
+
 
     fun getIntelligence(): String? {
         val intelligenceMap: Map<Int, String> = mapOf(
@@ -53,7 +55,6 @@ class IntelligenceComputation(private val numbers: List<Int>) {
             10 to "Inteligencia emocional",
             11 to "Inteligencia colaborativa"
         )
-
-        return intelligenceMap[getMaxPosition()]
+        return intelligenceMap[getLesserIndexDistance()]
     }
 }

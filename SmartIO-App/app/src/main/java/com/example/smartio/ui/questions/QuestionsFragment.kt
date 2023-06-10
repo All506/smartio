@@ -46,9 +46,10 @@ class QuestionsFragment : Fragment() {
 
         val questions = QuestionFactory(requireContext()).getQuestions()
 
+
         binding.btnResult.setOnClickListener {
             if(QuestionFactory(requireContext()).allQuestionsAnswered(questions)){
-                //TODO Euclides aqui
+
                 val answers = mutableListOf<Int>()
 
                 for (question in questions){
@@ -57,7 +58,7 @@ class QuestionsFragment : Fragment() {
 
                 val weightMatrixInstance = IntelligenceComputation(answers)
 
-                println(weightMatrixInstance.getIntelligence())
+                val userIntelligence = weightMatrixInstance.getIntelligence()
             }
         }
 
