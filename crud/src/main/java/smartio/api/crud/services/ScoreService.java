@@ -6,16 +6,21 @@ import org.springframework.stereotype.Service;
 import smartio.api.crud.models.ScoreModel;
 import smartio.api.crud.models.UserModel;
 import smartio.api.crud.repositories.IScoreRepository;
-import java.util.ArrayList;
+import smartio.api.crud.repositories.IUserRepository;
+
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 
 @Service
 public class ScoreService {
 
     @Autowired
     IScoreRepository scoreRepository;
+
+    @Autowired
+    IUserRepository userRepository;
 
     private final Map<Integer, String> intelligences = new HashMap<>();
 
@@ -35,15 +40,37 @@ public class ScoreService {
         intelligences.put(11, "colaborativa");
     }
 
-    public ArrayList<ScoreModel> getAllScores(){
-        return (ArrayList <ScoreModel>) scoreRepository.findAll();
+    public List<ScoreModel> getAllScores() {
+        return (List<ScoreModel>) scoreRepository.findAll();
     }
 
-    //--------------------------------------------
+    public ScoreModel findById (long id){
+        Optional<ScoreModel> optional = scoreRepository.findById(id);
+        if(optional.isEmpty())
+            throw new RuntimeException("Score no encontrado");
 
-    public void saveScoreWithUser(ScoreModel score, UserModel user) {
-        scoreRepository.insertScore(score.getIntelligence_code(), score.getScore(), user);
+        return optional.get();
+    }
+
+    public ScoreModel save (ScoreModel scoreModel){
+        if(scoreModel == null)
+            throw new RuntimeException("Score no válido");
+        return scoreRepository.save(scoreModel);
+    }
+
+    public void saveScores(Long userId, List<ScoreModel> scores) {
+        Optional<UserModel> optionalUser = userRepository.findById(userId);
+        if (optionalUser.isPresent()) {
+            UserModel user = optionalUser.get();
+            for (ScoreModel score : scores) {
+                score.setUser(user);
+                scoreRepository.save(score);
+            }
+        } else {
+            throw new RuntimeException("User not found with id: " + userId);
+        }
     }
 
 
 }
+

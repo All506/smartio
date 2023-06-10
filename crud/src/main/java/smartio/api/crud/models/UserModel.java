@@ -12,6 +12,7 @@ public class UserModel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name="user_id")
     private Long id;
 
     @Column
@@ -23,15 +24,7 @@ public class UserModel {
     @Column
     private String password;
 
-    @OneToMany(fetch = FetchType.LAZY, mappedBy="user", cascade=CascadeType.ALL)
-    List<ScoreModel> scores;
-
-    public List<ScoreModel> getScores() {
-        return scores;
-    }
-
-    public void setScores(List<ScoreModel> scores) {
-        this.scores = scores;
+    public UserModel() {
     }
 
     public Long getId() {

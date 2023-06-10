@@ -17,8 +17,11 @@ public class ScoreModel {
     private int score;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name="id_user")
+    @JoinColumn(name="user_id")
     private UserModel user;
+
+    public ScoreModel() {
+    }
 
     public Long getId() {
         return id;

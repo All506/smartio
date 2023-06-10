@@ -9,9 +9,9 @@ import org.springframework.stereotype.Repository;
 import smartio.api.crud.models.ScoreModel;
 import smartio.api.crud.models.UserModel;
 
+import java.util.List;
+
 @Repository
 public interface IScoreRepository extends JpaRepository<ScoreModel, Long> {
-    @Modifying
-    @Query("INSERT INTO Score (codigoInteligencia, score, user) VALUES (:codigoInteligencia, :score, :user)")
-    void insertScore(@Param("codigoInteligencia") int codigoInteligencia, @Param("score") int score, @Param("user") UserModel user);
+
 }
