@@ -12,10 +12,10 @@ interface ApiService {
     @POST("user/login")
     suspend fun loginUser(@Body user: User): Response<User>
 
-    @POST("user/scores")
+    @POST("scores")
     suspend fun createScore(@Body user: User): Response<Void>
 
-    @GET("user/matches")
+    @GET("matches")
     suspend fun getMatches(@Body user: User): Response<List<User>>
 
 }

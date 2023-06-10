@@ -10,15 +10,15 @@
     <!-- TODO: Update blank fragment layout -->
 
     <EditText
-        android:id="@+id/editTextText"
+        android:id="@+id/etxName"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="text"
         app:layout_constraintBottom_toTopOf="@+id/textView4"
-        app:layout_constraintEnd_toEndOf="@+id/editTextTextEmailAddress"
+        app:layout_constraintEnd_toEndOf="@+id/etxEmailAddress"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextEmailAddress"
+        app:layout_constraintStart_toStartOf="@+id/etxEmailAddress"
         app:layout_constraintTop_toBottomOf="@+id/txtvName" />
 
     <TextView
@@ -28,8 +28,8 @@
         android:layout_marginStart="8dp"
         android:text="Name"
         android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/editTextText"
-        app:layout_constraintStart_toStartOf="@+id/editTextText"
+        app:layout_constraintBottom_toTopOf="@+id/etxName"
+        app:layout_constraintStart_toStartOf="@+id/etxName"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_chainStyle="packed" />
 
@@ -40,12 +40,12 @@
         android:layout_marginStart="8dp"
         android:text="Password"
         android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextPassword"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextPassword"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress" />
+        app:layout_constraintBottom_toTopOf="@+id/etxPassword"
+        app:layout_constraintStart_toStartOf="@+id/etxPassword"
+        app:layout_constraintTop_toBottomOf="@+id/etxEmailAddress" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnSignup"
         style="@style/MainButtonStyle"
         android:layout_width="@dimen/big_button"
         android:layout_height="wrap_content"
@@ -53,29 +53,29 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
+        app:layout_constraintTop_toBottomOf="@+id/etxPassword" />
 
     <EditText
-        android:id="@+id/editTextTextEmailAddress"
+        android:id="@+id/etxEmailAddress"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textEmailAddress"
         app:layout_constraintBottom_toTopOf="@+id/textView5"
-        app:layout_constraintEnd_toEndOf="@+id/editTextTextPassword"
+        app:layout_constraintEnd_toEndOf="@+id/etxPassword"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextPassword"
+        app:layout_constraintStart_toStartOf="@+id/etxPassword"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
     <EditText
-        android:id="@+id/editTextTextPassword"
+        android:id="@+id/etxPassword"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPassword"
-        app:layout_constraintBottom_toTopOf="@+id/button"
-        app:layout_constraintEnd_toEndOf="@+id/button"
-        app:layout_constraintStart_toStartOf="@+id/button"
+        app:layout_constraintBottom_toTopOf="@+id/btnSignup"
+        app:layout_constraintEnd_toEndOf="@+id/btnSignup"
+        app:layout_constraintStart_toStartOf="@+id/btnSignup"
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
     <TextView
@@ -85,8 +85,8 @@
         android:layout_marginStart="8dp"
         android:text="Email"
         android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextEmailAddress"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextEmailAddress"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText" />
+        app:layout_constraintBottom_toTopOf="@+id/etxEmailAddress"
+        app:layout_constraintStart_toStartOf="@+id/etxEmailAddress"
+        app:layout_constraintTop_toBottomOf="@+id/etxName" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

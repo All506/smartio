@@ -9,6 +9,6 @@ data class User(
     val name: String,
     val email: String,
     val password: String,
-    val scores: List<IntelligenseScore>,
+    val scores: List<IntelligenseScore>? = null,
 
     ) : Serializable

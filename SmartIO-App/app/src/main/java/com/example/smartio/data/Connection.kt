@@ -9,7 +9,7 @@ class Connection {
 
     companion object {
 
-        private var baseUrl = "http://192.168.1.93:3000/"
+        private var baseUrl = "http://192.168.1.93:8000/"
 
         fun getRetrofit(url: String? = baseUrl): Retrofit {
             val client = OkHttpClient.Builder().build()
