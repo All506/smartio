@@ -20,8 +20,10 @@ import androidx.recyclerview.widget.PagerSnapHelper
 import androidx.recyclerview.widget.RecyclerView
 import com.example.smartio.R
 import com.example.smartio.databinding.FragmentQuestionsBinding
+import com.example.smartio.domain.IntelligenceComputation
 import com.example.smartio.domain.Question
 import com.example.smartio.domain.QuestionFactory
+import com.example.smartio.domain.WeightMatrix
 import com.example.smartio.ui.questions.adapter.QuestionsAdapter
 
 
@@ -45,16 +47,23 @@ class QuestionsFragment : Fragment() {
 
         val questions = QuestionFactory(requireContext()).getQuestions()
 
+
         binding.btnResult.setOnClickListener {
             if(QuestionFactory(requireContext()).allQuestionsAnswered(questions)){
-                //TODO Euclides aqui
 
+                val answers = mutableListOf<Int>()
+
+                for (question in questions){
+                    answers.add(question.answer)
+                }
+
+                val intelligenceComputation = IntelligenceComputation(answers)
+
+                val userIntelligence = intelligenceComputation.getIntelligence()
 
                 findNavController().navigate(R.id.action_questionsFragment_to_resultsFragment)
             }
         }
-
-
 
         iniciarRecyclerView(
             context,
