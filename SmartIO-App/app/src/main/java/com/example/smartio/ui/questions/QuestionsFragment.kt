@@ -56,9 +56,9 @@ class QuestionsFragment : Fragment() {
                     answers.add(question.answer)
                 }
 
-                val weightMatrixInstance = IntelligenceComputation(answers)
+                val intelligenceComputation = IntelligenceComputation(answers)
 
-                val userIntelligence = weightMatrixInstance.getIntelligence()
+                val userIntelligence = intelligenceComputation.getIntelligence()
             }
         }
 
