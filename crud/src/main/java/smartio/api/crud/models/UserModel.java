@@ -23,6 +23,17 @@ public class UserModel {
     @Column
     private String password;
 
+    @OneToMany(fetch = FetchType.LAZY, mappedBy="user", cascade=CascadeType.ALL)
+    List<ScoreModel> scores;
+
+    public List<ScoreModel> getScores() {
+        return scores;
+    }
+
+    public void setScores(List<ScoreModel> scores) {
+        this.scores = scores;
+    }
+
     public Long getId() {
         return id;
     }
