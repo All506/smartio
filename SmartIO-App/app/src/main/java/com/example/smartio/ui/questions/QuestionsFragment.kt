@@ -14,6 +14,7 @@ import android.widget.LinearLayout
 import android.widget.RelativeLayout
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.PagerSnapHelper
 import androidx.recyclerview.widget.RecyclerView
@@ -48,6 +49,8 @@ class QuestionsFragment : Fragment() {
             if(QuestionFactory(requireContext()).allQuestionsAnswered(questions)){
                 //TODO Euclides aqui
 
+
+                findNavController().navigate(R.id.action_questionsFragment_to_resultsFragment)
             }
         }
 
@@ -97,6 +100,7 @@ class QuestionsFragment : Fragment() {
                 ColorStateList.valueOf(getColorForProgress(questions[0].answer))
 
         }
+
     }
 
     private fun iniciarRecyclerView(context: Context?, questions: List<Question>) {

@@ -18,5 +18,13 @@
         android:id="@+id/questionsFragment"
         android:name="com.example.smartio.ui.questions.QuestionsFragment"
         android:label="fragment_questions"
-        tools:layout="@layout/fragment_questions" />
+        tools:layout="@layout/fragment_questions" >
+        <action
+            android:id="@+id/action_questionsFragment_to_resultsFragment"
+            app:destination="@id/resultsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/resultsFragment"
+        android:name="com.example.smartio.ui.ResultsFragment"
+        android:label="ResultsFragment" />
 </navigation>
