@@ -1,6 +1,7 @@
 package smartio.api.crud.models;
 
 
+
 import javax.persistence.*;
 
 @Entity
@@ -8,7 +9,7 @@ import javax.persistence.*;
 public class ScoreModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private long id;
 
     @Column
     private int intelligence_code;
@@ -16,18 +17,18 @@ public class ScoreModel {
     @Column
     private int score;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name="user_id")
     private UserModel user;
 
     public ScoreModel() {
     }
 
-    public Long getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(long id) {
         this.id = id;
     }
 

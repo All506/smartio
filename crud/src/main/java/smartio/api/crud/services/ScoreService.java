@@ -8,10 +8,7 @@ import smartio.api.crud.models.UserModel;
 import smartio.api.crud.repositories.IScoreRepository;
 import smartio.api.crud.repositories.IUserRepository;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Optional;
+import java.util.*;
 
 @Service
 public class ScoreService {
@@ -44,21 +41,21 @@ public class ScoreService {
         return (List<ScoreModel>) scoreRepository.findAll();
     }
 
-    public ScoreModel findById (long id){
+    public ScoreModel findById(long id) {
         Optional<ScoreModel> optional = scoreRepository.findById(id);
-        if(optional.isEmpty())
+        if (optional.isEmpty())
             throw new RuntimeException("Score no encontrado");
 
         return optional.get();
     }
 
-    public ScoreModel save (ScoreModel scoreModel){
-        if(scoreModel == null)
+    public ScoreModel save(ScoreModel scoreModel) {
+        if (scoreModel == null)
             throw new RuntimeException("Score no válido");
         return scoreRepository.save(scoreModel);
     }
 
-    public void saveScores(Long userId, List<ScoreModel> scores) {
+    public void saveScores(long userId, List<ScoreModel> scores) {
         Optional<UserModel> optionalUser = userRepository.findById(userId);
         if (optionalUser.isPresent()) {
             UserModel user = optionalUser.get();
@@ -69,6 +66,10 @@ public class ScoreService {
         } else {
             throw new RuntimeException("User not found with id: " + userId);
         }
+    }
+
+    public List<ScoreModel> getScoresByUserId(long userId) {
+        return scoreRepository.findByUserId(userId);
     }
 
 

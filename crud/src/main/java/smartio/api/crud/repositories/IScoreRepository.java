@@ -14,4 +14,6 @@ import java.util.List;
 @Repository
 public interface IScoreRepository extends JpaRepository<ScoreModel, Long> {
 
+    List<ScoreModel> findByUserId(@Param("user_id") long user_id);
+
 }

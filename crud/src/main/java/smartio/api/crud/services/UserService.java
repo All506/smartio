@@ -9,6 +9,8 @@ import smartio.api.crud.models.UserModel;
 import smartio.api.crud.repositories.IUserRepository;
 
 import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 
 @Service
@@ -78,6 +80,10 @@ public class UserService {
         UserModel user = userRepository.findByEmail(email);
 
         return user;
+    }
+
+    public List<Object> getUserScores(Long userId) {
+        return userRepository.findUserScores(userId);
     }
 
 
