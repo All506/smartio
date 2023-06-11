@@ -99,10 +99,10 @@ class QuestionsFragment : Fragment() {
                 checkBox.scaleX = 1.2f
                 checkBox.scaleY = 1.2f
 
-                if (i < 18) {
-                    containerChecks.addView(checkBox)
-                } else {
+                if (i<18) {
                     containerChecks2.addView(checkBox)
+                }else{
+                    containerChecks.addView(checkBox)
                 }
 
             }

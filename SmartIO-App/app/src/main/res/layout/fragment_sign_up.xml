@@ -26,7 +26,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:text="Name"
+        android:text="Nombre Completo"
         android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/etxName"
         app:layout_constraintStart_toStartOf="@+id/etxName"
@@ -38,7 +38,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:text="Password"
+        android:text="Contraseña"
         android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/etxPassword"
         app:layout_constraintStart_toStartOf="@+id/etxPassword"
@@ -49,7 +49,7 @@
         style="@style/MainButtonStyle"
         android:layout_width="@dimen/big_button"
         android:layout_height="wrap_content"
-        android:text="SignUp"
+        android:text="Unirse"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -83,10 +83,19 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:text="Email"
+        android:text="Correo Electrónico"
         android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/etxEmailAddress"
         app:layout_constraintStart_toStartOf="@+id/etxEmailAddress"
         app:layout_constraintTop_toBottomOf="@+id/etxName" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        android:src="@drawable/smartio"
+        app:layout_constraintBottom_toTopOf="@+id/txtvName"
+        app:layout_constraintEnd_toEndOf="@+id/editTextText"
+        app:layout_constraintStart_toStartOf="@+id/editTextText" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
