@@ -15,7 +15,7 @@ public class ScoreModel {
     private int intelligence_code;
 
     @Column
-    private int score;
+    private float score;
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name="user_id")
@@ -40,11 +40,11 @@ public class ScoreModel {
         this.intelligence_code = intelligence_code;
     }
 
-    public int getScore() {
+    public float getScore() {
         return score;
     }
 
-    public void setScore(int score) {
+    public void setScore(float score) {
         this.score = score;
     }
 
