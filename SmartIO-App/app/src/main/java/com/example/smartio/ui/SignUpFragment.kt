@@ -1,12 +1,12 @@
 package com.example.smartio.ui
 
-import android.app.AlertDialog
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
 import com.example.smartio.R
 import com.example.smartio.data.ApiService
@@ -37,13 +37,14 @@ class SignUpFragment : Fragment() {
 
         binding.apply {
             btnSignup.setOnClickListener {
+
+                val user = User(
+                    0,
+                    name = etxName.text.toString(),
+                    email = etxEmailAddress.text.toString(),
+                    password = etxPassword.text.toString()
+                )
                 CoroutineScope(Dispatchers.IO).launch {
-                    val user = User(
-                        0,
-                        name = etxName.text.toString(),
-                        email = etxEmailAddress.text.toString(),
-                        password = etxPassword.text.toString()
-                    )
                     try {
                         val response =
                             Connection.getRetrofit().create(ApiService::class.java).createUser(user)

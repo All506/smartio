@@ -2,11 +2,10 @@ package com.example.smartio.ui
 
 import android.os.Bundle
 import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
+import androidx.fragment.app.Fragment
 import com.example.smartio.R
 import com.example.smartio.data.ApiService
 import com.example.smartio.data.Connection.Companion.getRetrofit
@@ -50,7 +49,11 @@ class ResultsFragment : Fragment() {
                     response.body()?.let {
                         binding.apply {
                             requireActivity().runOnUiThread {
-                                lblPersonas.text = it[0] + "\n" + it[1] + "\n" + it[2]
+                                var people = ""
+                                for (score in it){
+                                    people += score + "\n"
+                                }
+                                lblPersonas.text = people
                             }
 
                         }

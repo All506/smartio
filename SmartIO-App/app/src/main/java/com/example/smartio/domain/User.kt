@@ -6,7 +6,7 @@ data class User(
     val name: String,
     val email: String,
     val password: String,
-    var scores: List<IntelligenceScore> = null!!
+    var scores: List<IntelligenceScore>? = null
 
     ){
     companion object {
