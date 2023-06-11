@@ -59,6 +59,10 @@ public class ScoreService {
         Optional<UserModel> optionalUser = userRepository.findById(userId);
         if (optionalUser.isPresent()) {
             UserModel user = optionalUser.get();
+            // Obtener las tuplas existentes con el mismo user_id
+            List<ScoreModel> existingScores = scoreRepository.findByUser(user);
+            // Borrar las tuplas existentes
+            scoreRepository.deleteAll(existingScores);
             for (ScoreModel score : scores) {
                 score.setUser(user);
                 scoreRepository.save(score);
