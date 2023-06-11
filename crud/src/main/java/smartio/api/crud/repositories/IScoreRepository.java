@@ -10,8 +10,9 @@ import smartio.api.crud.models.ScoreModel;
 import smartio.api.crud.models.UserModel;
 
 import java.util.List;
+import java.util.Optional;
 
 @Repository
 public interface IScoreRepository extends JpaRepository<ScoreModel, Long> {
-
+    List<ScoreModel> findByUser(UserModel user);
 }

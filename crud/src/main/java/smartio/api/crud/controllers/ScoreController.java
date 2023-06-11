@@ -20,6 +20,8 @@ public class ScoreController {
     
     @PostMapping("/{userId}")
     public ResponseEntity<String> saveScores(@PathVariable Long userId, @RequestBody List<ScoreModel> scores) {
+
+
         scoreService.saveScores(userId, scores);
 
 

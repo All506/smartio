@@ -8,10 +8,7 @@ import smartio.api.crud.models.UserModel;
 import smartio.api.crud.repositories.IScoreRepository;
 import smartio.api.crud.repositories.IUserRepository;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Optional;
+import java.util.*;
 
 @Service
 public class ScoreService {
@@ -62,6 +59,14 @@ public class ScoreService {
         Optional<UserModel> optionalUser = userRepository.findById(userId);
         if (optionalUser.isPresent()) {
             UserModel user = optionalUser.get();
+        // Obtener las tuplas existentes con el mismo user_id
+            List<ScoreModel> existingScores = scoreRepository.findByUser(user);
+            // Borrar las tuplas existentes
+            scoreRepository.deleteAll(existingScores);
+
+            for(ScoreModel score : scores){
+
+            }
             for (ScoreModel score : scores) {
                 score.setUser(user);
                 scoreRepository.save(score);
