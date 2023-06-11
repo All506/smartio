@@ -12,7 +12,8 @@ public class UserModel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    @Column(name="user_id")
+    private long id;
 
     @Column
     private String name;
@@ -23,11 +24,14 @@ public class UserModel {
     @Column
     private String password;
 
-    public Long getId() {
+    public UserModel() {
+    }
+
+    public long getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(long id) {
         this.id = id;
     }
 

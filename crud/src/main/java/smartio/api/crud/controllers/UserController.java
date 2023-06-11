@@ -21,23 +21,7 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-    private final Map<Integer, String> intelligences = new HashMap<>();
 
-    public void intelligenceLabeling() {
-        // Agregar las etiquetas al mapa
-        intelligences.put(0, "espacial");
-        intelligences.put(1, "musical");
-        intelligences.put(2, "linguistico-verbal");
-        intelligences.put(3, "logico-matematica");
-        intelligences.put(4, "corporal-cinestesica");
-        intelligences.put(5, "intrapersonal");
-        intelligences.put(6, "interpersonal");
-        intelligences.put(7, "naturalista");
-        intelligences.put(8, "existencial");
-        intelligences.put(9, "creativa");
-        intelligences.put(10, "emocional");
-        intelligences.put(11, "colaborativa");
-    }
     @GetMapping
     public ArrayList<UserModel> getUsers(){
         return this.userService.getUsers();
