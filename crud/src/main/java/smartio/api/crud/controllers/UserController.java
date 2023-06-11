@@ -2,16 +2,11 @@ package smartio.api.crud.controllers;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
-import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import smartio.api.crud.models.UserModel;
-import smartio.api.crud.repositories.IUserRepository;
 import smartio.api.crud.services.UserService;
 
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
 import java.util.Optional;
 
 @RestController
@@ -39,7 +34,6 @@ public class UserController {
 
     @GetMapping(path = "/{id}")
     public Optional<UserModel> getUserById(@PathVariable("id") Long id){
-
         return this.userService.getUserById(id);
     }
 
