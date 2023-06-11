@@ -50,6 +50,7 @@
                     android:ems="10"
                     android:inputType="textEmailAddress"
                     android:textColor="#FFE8E8E8"
+                    android:textColorLink="#DC2424"
                     android:textSize="16sp"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toTopOf="@+id/txtPassword"
