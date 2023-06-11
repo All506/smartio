@@ -1,14 +1,12 @@
 package com.example.smartio.domain
 
-import java.io.Serializable
-
 data class User(
 
-    val ID: Int,
+    val id: Int,
     val name: String,
     val email: String,
     val password: String,
-    val scores: List<IntelligenceScore>? = null,
+    var scores: List<IntelligenceScore> = null!!
 
     ){
     companion object {

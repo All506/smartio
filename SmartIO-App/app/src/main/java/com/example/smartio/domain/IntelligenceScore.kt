@@ -1,6 +1,8 @@
 package com.example.smartio.domain
 
+import java.io.Serializable
+
 class IntelligenceScore(
-    val IntelligencePosition: Int,
-    val IntelligenceScore: Float
-)
+    val intelligence_code: Int,
+    val score: Float
+):Serializable

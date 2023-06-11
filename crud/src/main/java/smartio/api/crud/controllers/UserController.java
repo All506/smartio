@@ -59,7 +59,8 @@ public class UserController {
     public UserModel validateUser(@RequestBody UserModel user) {
 
         if (userService.validateUser(user.getEmail(), user.getPassword())) {
-            return userService.getUserByEmail(user.getEmail());
+            UserModel user2 = userService.getUserByEmail(user.getEmail());
+            return user2;
         } else {
             return null;
         }

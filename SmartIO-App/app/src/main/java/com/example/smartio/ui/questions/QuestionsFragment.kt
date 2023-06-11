@@ -20,10 +20,11 @@ import androidx.recyclerview.widget.PagerSnapHelper
 import androidx.recyclerview.widget.RecyclerView
 import com.example.smartio.R
 import com.example.smartio.databinding.FragmentQuestionsBinding
-import com.example.smartio.domain.IntelligenceComputation
-import com.example.smartio.domain.Question
-import com.example.smartio.domain.QuestionFactory
+import com.example.smartio.domain.*
 import com.example.smartio.ui.questions.adapter.QuestionsAdapter
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 
 
 class QuestionsFragment : Fragment() {
@@ -51,6 +52,7 @@ class QuestionsFragment : Fragment() {
             if (QuestionFactory(requireContext()).allQuestionsAnswered(questions)) {
 
                 val answers = mutableListOf<Int>()
+
 
                 for (question in questions) {
                     answers.add(question.answer)

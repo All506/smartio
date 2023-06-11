@@ -14,6 +14,7 @@ class IntelligenceComputation(private val numbers: List<Int>) {
 
     private fun calEuclideanDistance(): List<Pair<Int, Double>> {
         val distances = mutableListOf<Pair<Int, Double>>() // Lista de pares (índice de inteligencia, distancia euclidiana)
+        val scores = mutableListOf<IntelligenceScore>()
 
         for ((i, weights) in weightMatrixInstance.getWeightMatrix().withIndex()) {
             var squaresSum = 0.0
@@ -25,8 +26,10 @@ class IntelligenceComputation(private val numbers: List<Int>) {
 
             val distance = sqrt(squaresSum)
             distances.add(Pair(i, distance))
+            scores.add(IntelligenceScore(i, distance.toFloat()))
         }
-        return distances;
+        User.actualUser!!.scores = scores
+        return distances
     }
 
     private fun getLesserIndexDistance(): Int {

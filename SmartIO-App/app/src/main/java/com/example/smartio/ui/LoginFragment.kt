@@ -76,7 +76,8 @@ class LoginFragment : Fragment() {
                                     0,
                                     "",
                                     txtEmail.text.toString(),
-                                    txtPassword.text.toString()
+                                    txtPassword.text.toString(),
+                                    mutableListOf()
                                 )
                             )
                         if (response.isSuccessful) {
