@@ -3,14 +3,12 @@ package smartio.api.crud.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 import smartio.api.crud.models.UserModel;
+import smartio.api.crud.models.UserScoreProjection;
 import smartio.api.crud.repositories.IUserRepository;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 import java.util.Optional;
 
 @Service
@@ -18,7 +16,6 @@ public class UserService {
 
     @Autowired
     IUserRepository userRepository;
-
 
     public ArrayList <UserModel> getUsers(){
         return (ArrayList <UserModel>) userRepository.findAll();
@@ -82,8 +79,10 @@ public class UserService {
         return user;
     }
 
-    public List<Object> getUserScores(Long userId) {
-        return userRepository.findUserScores(userId);
+
+
+    public List<UserScoreProjection> getUserScoresById() {
+        return userRepository.findUserScoresById();
     }
 
 

@@ -15,7 +15,4 @@ interface ApiService {
     @POST("scores")
     suspend fun createScore(@Body user: User): Response<Void>
 
-    @GET("matches")
-    suspend fun getMatches(@Body user: User): Response<List<User>>
-
 }
