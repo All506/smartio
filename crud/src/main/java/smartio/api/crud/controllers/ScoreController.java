@@ -4,11 +4,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import smartio.api.crud.models.ScoreModel;
-import smartio.api.crud.models.UserModel;
 import smartio.api.crud.services.ScoreService;
 
 import java.util.List;
-import java.util.Optional;
+
 
 @RestController
 @RequestMapping("/score")
