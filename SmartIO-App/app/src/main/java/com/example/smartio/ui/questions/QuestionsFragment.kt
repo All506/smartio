@@ -1,5 +1,6 @@
 package com.example.smartio.ui.questions
 
+import androidx.fragment.app.Fragment
 import android.content.Context
 import android.content.res.ColorStateList
 import android.graphics.Color
@@ -13,15 +14,17 @@ import android.widget.CheckBox
 import android.widget.LinearLayout
 import android.widget.RelativeLayout
 import androidx.core.content.ContextCompat
-import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.PagerSnapHelper
 import androidx.recyclerview.widget.RecyclerView
 import com.example.smartio.R
 import com.example.smartio.databinding.FragmentQuestionsBinding
-import com.example.smartio.domain.Question
-import com.example.smartio.domain.QuestionFactory
+import com.example.smartio.domain.*
 import com.example.smartio.ui.questions.adapter.QuestionsAdapter
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 
 
 class QuestionsFragment : Fragment() {
@@ -44,14 +47,24 @@ class QuestionsFragment : Fragment() {
 
         val questions = QuestionFactory(requireContext()).getQuestions()
 
-        binding.btnResult.setOnClickListener {
-            if(QuestionFactory(requireContext()).allQuestionsAnswered(questions)){
-                //TODO Euclides aqui
 
+        binding.btnResult.setOnClickListener {
+            if (QuestionFactory(requireContext()).allQuestionsAnswered(questions)) {
+
+                val answers = mutableListOf<Int>()
+
+
+                for (question in questions) {
+                    answers.add(question.answer)
+                }
+
+                val intelligenceComputation = IntelligenceComputation(answers)
+
+                intelligenceComputation.getIntelligence()
+
+                findNavController().navigate(R.id.action_questionsFragment_to_resultsFragment)
             }
         }
-
-
 
         iniciarRecyclerView(
             context,
@@ -87,9 +100,9 @@ class QuestionsFragment : Fragment() {
                 checkBox.scaleY = 1.2f
 
                 if (i<18) {
-                    containerChecks.addView(checkBox)
-                }else{
                     containerChecks2.addView(checkBox)
+                }else{
+                    containerChecks.addView(checkBox)
                 }
 
             }
@@ -97,6 +110,7 @@ class QuestionsFragment : Fragment() {
                 ColorStateList.valueOf(getColorForProgress(questions[0].answer))
 
         }
+
     }
 
     private fun iniciarRecyclerView(context: Context?, questions: List<Question>) {
@@ -144,7 +158,7 @@ class QuestionsFragment : Fragment() {
                         checkList[pos].buttonTintList =
                             ColorStateList.valueOf(getColorForProgress(questions[pos!!].answer))
 
-                        if(QuestionFactory(requireContext()).allQuestionsAnswered(questions)){
+                        if (QuestionFactory(requireContext()).allQuestionsAnswered(questions)) {
                             btnResult.visibility = View.VISIBLE
                             containerChecks.visibility = View.GONE
                             containerChecks2.visibility = View.GONE
