@@ -25,7 +25,7 @@ public class ScoreController {
     public List<String> saveScores(@PathVariable long userId, @RequestBody List<ScoreModel> scores) {
 
         Matches matches = new Matches();
-        List<String> names = matches.getUserMatches(scores, userService);
+        List<String> names = matches.getUserMatches(scores, userService, userId);
 
         System.out.println(names.toString());
 

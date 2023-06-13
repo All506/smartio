@@ -13,7 +13,7 @@ public class Matches {
     }
 
 
-    public List<String> getUserMatches(List<ScoreModel> scores, UserService userService) {
+    public List<String> getUserMatches(List<ScoreModel> scores, UserService userService, long userId) {
 
         Map<Integer, Float> incomingScores = new HashMap<>();
         for (ScoreModel score : scores) {
@@ -54,7 +54,7 @@ public class Matches {
 
         Map<Long, Double> sortedDistanceMap = sortMap(distanceMap);
 
-        List<String> names = getUserNamesFromSortedMap(sortedDistanceMap, userService);
+        List<String> names = getUserNamesFromSortedMap(sortedDistanceMap, userService, userId);
 
         return names;
     }
@@ -87,13 +87,17 @@ public class Matches {
         return Math.sqrt(sum);
     }
 
-    public List<String> getUserNamesFromSortedMap(Map<Long, Double> sortedDistanceMap, UserService userService) {
+    public List<String> getUserNamesFromSortedMap(Map<Long, Double> sortedDistanceMap, UserService userService, long userId) {
         List<String> userNames = new ArrayList<>();
 
         int count = 0;
         for (long uId : sortedDistanceMap.keySet()) {
             if (count >= 3) {
                 break; // Hemos obtenido los 3 primeros nombres, salimos del bucle
+            }
+
+            if (uId == userId) {
+                continue; // Ignoramos este usuario y pasamos al siguiente
             }
 
             Optional<UserModel> userOptional = userService.getUserById(uId);
@@ -106,6 +110,5 @@ public class Matches {
         }
         return userNames;
     }
-
 
 }
