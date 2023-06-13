@@ -37,7 +37,7 @@ class SignUpFragment : Fragment() {
 
         binding.apply {
             btnSignup.setOnClickListener {
-
+                it.isClickable = false
                 val user = User(
                     0,
                     name = etxName.text.toString(),
@@ -77,6 +77,7 @@ class SignUpFragment : Fragment() {
                             Log.i("Error", e.message.toString())
                         }
                     }
+                    it.isClickable = true
                 }
             }
         }

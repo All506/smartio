@@ -67,6 +67,7 @@ class LoginFragment : Fragment() {
             }
 
             btnLogin.setOnClickListener {
+                it.isClickable = false
 
                 CoroutineScope(Dispatchers.IO).launch {
                     try {
@@ -115,8 +116,7 @@ class LoginFragment : Fragment() {
                             ).show()
                         }
                     }
-
-
+                    it.isClickable = true
                 }
 
 
